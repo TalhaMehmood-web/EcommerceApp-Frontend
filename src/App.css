@@ -1,0 +1,152 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+}
+/* ::-webkit-scrollbar {
+  width: 5px;
+  background: #141929;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #27418f;
+  border-radius: 20px;
+} */
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #4e597a;
+  border-radius: 40px;
+  border: 1px solid transparent;
+}
+.slick-slide div {
+  margin: 0px 10px;
+}
+.slick-prev button {
+  color: black;
+}
+.no-scroll::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+.line {
+  position: relative;
+}
+.line::before {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(28, 165, 219);
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  .table-auto {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  .table-auto th,
+  .table-auto td {
+    width: auto;
+  }
+}
+
+.bg-image {
+  background: url("../src/assets/chat.png") no-repeat center center fixed;
+  background-blend-mode: difference;
+  position: relative;
+  opacity: 0.9;
+  background-size: cover;
+}
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 auto;
+}
+
+.carousel-slide.active {
+  flex: 0 0 auto;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
